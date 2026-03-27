@@ -1,0 +1,13 @@
+.auth-shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5c6cff 0%, #6d28d9 100%);
+}
+
+.auth-card {
+  border-radius: 16px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+}

@@ -1,0 +1,72 @@
+<div class="profile-shell min-vh-100 py-4">
+  <div class="container" *ngIf="user as u">
+    <header class="d-flex flex-wrap gap-2 align-items-center justify-content-between bg-white shadow-sm rounded-3 p-3 mb-4">
+      <div>
+        <h1 class="h4 mb-1">User Authentication System</h1>
+        <p class="mb-0 text-muted">Welcome, {{ u.fullName }}</p>
+      </div>
+      <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+    </header>
+
+    <div class="row g-3">
+      <div class="col-12 col-lg-8">
+        <section class="card border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="avatar">{{ initials }}</div>
+              <div>
+                <h2 class="h5 mb-1">{{ u.fullName }}</h2>
+                <p class="text-muted mb-0">{{ u.email }}</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12 col-md-6"><strong>Phone:</strong> {{ u.phoneNumber }}</div>
+              <div class="col-12 col-md-6"><strong>Date of Birth:</strong> {{ u.dateOfBirth | date }}</div>
+              <div class="col-12"><strong>Address:</strong> {{ u.address }}</div>
+              <div class="col-12 col-md-6"><strong>City:</strong> {{ u.city }}</div>
+              <div class="col-12 col-md-6"><strong>Country:</strong> {{ u.country }}</div>
+              <div class="col-12 col-md-6"><strong>User Type:</strong> {{ u.userType }}</div>
+              <div class="col-12 col-md-6"><strong>Registered Date:</strong> {{ u.registeredDate | date: 'medium' }}</div>
+            </div>
+
+            <div class="d-flex gap-2 mt-4">
+              <button class="btn btn-primary" (click)="onEditProfile()">Edit Profile</button>
+              <button class="btn btn-outline-danger" (click)="onDeleteAccount()">Delete Account</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-12 col-lg-4">
+        <section class="card border-0 shadow-sm rounded-3 mb-3">
+          <div class="card-body">
+            <h3 class="h6">Account Information</h3>
+            <p class="mb-1"><strong>Status:</strong> {{ u.status }}</p>
+            <p class="mb-1"><strong>Type:</strong> {{ u.userType }}</p>
+            <p class="mb-0"><strong>Member Since:</strong> {{ u.registeredDate | date: 'MMM yyyy' }}</p>
+          </div>
+        </section>
+
+        <section class="card border-0 shadow-sm rounded-3 mb-3">
+          <div class="card-body">
+            <h3 class="h6">Total Users Count</h3>
+            <p class="display-6 mb-0">{{ totalUsersCount }}</p>
+          </div>
+        </section>
+
+        <section class="card border-0 shadow-sm rounded-3">
+          <div class="card-body">
+            <h3 class="h6">Quick Links</h3>
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" class="text-decoration-none">Edit Password</a></li>
+              <li><a href="#" class="text-decoration-none">Privacy Settings</a></li>
+              <li><a href="#" class="text-decoration-none">Account Settings</a></li>
+              <li><a href="#" class="text-decoration-none">Help</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

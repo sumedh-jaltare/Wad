@@ -1,0 +1,51 @@
+:root {
+    --app-bg: #f5f7fb;
+}
+
+body {
+    background: var(--app-bg);
+}
+
+.auth-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e9f0ff, #f8faff);
+}
+
+.auth-card {
+    border: 0;
+    border-radius: 16px;
+}
+
+.stats-card {
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    min-height: 120px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stats-card p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.stats-card h2 {
+    font-weight: 700;
+}
+
+#authMessage,
+#registrationMessage {
+    min-height: 24px;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .stats-card {
+        min-height: 105px;
+    }
+}

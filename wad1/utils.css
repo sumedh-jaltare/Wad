@@ -1,0 +1,10 @@
+/* Utility spacing classes */
+.gap {
+    margin: 1rem;
+}
+
+/* Reset default margins for paragraphs in divs */
+div p {
+    margin: 1rem;
+    padding: 1rem;
+}
